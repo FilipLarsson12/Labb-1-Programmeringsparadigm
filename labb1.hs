@@ -1,6 +1,8 @@
 import Data.Char
 import Data.List
 
+-- Uppgift 2
+
 rovarsprak :: String -> String
 rovarsprak [] = []
 rovarsprak (x:xs)
