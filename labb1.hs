@@ -1,5 +1,17 @@
+module F1 where
 import Data.Char
 import Data.List
+
+-- Uppgift 1
+
+fib :: Integer -> Integer
+fib 0 = 0
+fib 1 = 1
+fib 2 = 1
+fib 3 = 2
+fib 4 = 3
+fib 5 = 5
+fib x = 5 * fib(x-6) + 8 * fib(x-5)
 
 -- Uppgift 2
 
