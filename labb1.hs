@@ -45,3 +45,18 @@ countCharacters (x:xs)
 medellangd :: String -> Double
 medellangd [] = 0
 medellangd x = countCharacters x/countWords x
+
+
+-- Uppgift 4
+
+skyffla :: [a] -> [a] 
+skyffla [] = []
+skyffla x = sortOddIndex x ++ skyffla(sortEvenIndex x) 
+
+sortOddIndex :: [a] -> [a]
+sortOddIndex [] = []
+sortOddIndex xs = [(xs !! i) | i <- [0..length(xs)-1], i `mod` 2 == 0] 
+
+sortEvenIndex :: [a] -> [a]
+sortEvenIndex [] = []
+sortEvenIndex xs = [(xs !! i) | i <- [0..length(xs)-1], (i+1) `mod` 2 == 0]  
